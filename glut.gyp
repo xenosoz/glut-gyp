@@ -70,11 +70,19 @@
           ],
         }], # OS="win"
       ],
+      'direct_dependent_settings': {
+        'include_dirs': [
+          'src/include/',
+        ],
+      },
     }, # target: glut_lib
     {
       'target_name': 'glut_dll',
       'type': 'shared_library',
       'dependencies': [
+        'glut_lib',
+      ],
+      'export_dependent_settings': [
         'glut_lib',
       ],
       'conditions': [
