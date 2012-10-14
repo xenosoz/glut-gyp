@@ -80,10 +80,10 @@
       'target_name': 'glut_shared',
       'type': 'shared_library',
       'dependencies': [
-        'glut_lib',
+        'glut_static',
       ],
       'export_dependent_settings': [
-        'glut_lib',
+        'glut_static',
       ],
       'conditions': [
         ['OS=="win"', {
