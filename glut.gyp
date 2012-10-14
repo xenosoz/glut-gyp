@@ -4,7 +4,7 @@
 {
   'targets' : [
     {
-      'target_name': 'glut_lib',
+      'target_name': 'glut_static',
       'type': 'static_library',
       'include_dirs': [
         'glut-3.7/include',
@@ -75,9 +75,9 @@
           'glut-3.7/include/',
         ],
       },
-    }, # target: glut_lib
+    }, # target: glut_static
     {
-      'target_name': 'glut_dll',
+      'target_name': 'glut_shared',
       'type': 'shared_library',
       'dependencies': [
         'glut_lib',
@@ -93,7 +93,7 @@
           ],
         }], # OS="win"
       ],
-    }, # target: glut_dll
+    }, # target: glut_shared
   ],
 }
 # vim:sts=2:sw=2:norl
